@@ -80,6 +80,23 @@ class Student extends Connection {
         }
 //          Insert Data into Database
 
+/* --------------------------------    
+Execution :
+
+include_once '../../../vendor/autoload.php';
+
+use \App\admin\Student\Student as Student;
+use \App\lib\Helper as Helper;
+
+session_start();
+
+$student = new Student();
+$helper = new Helper();
+
+$_POST['image'] = $helper->upload_img();
+$student->set($_POST)->store();
+        
+--------------------------------- */   
 
     public function index(){
         try{
@@ -96,7 +113,30 @@ class Student extends Connection {
     }
 //          Display all Data 
 
+/* --------------------------------
+Execution:
 
+include_once '../../../vendor/autoload.php';
+
+session_start();
+
+$student = new App\admin\Student\Student();
+
+$students = $student->index();
+
+if (isset($_SESSION['msg'])){
+    echo $_SESSION['msg'];
+    session_unset();
+}
+if (isset($_SESSION['update'])){
+    echo $_SESSION['update'];
+    session_unset();
+}
+if (isset($_SESSION['delete'])){
+    echo $_SESSION['delete'];
+    session_unset();
+}
+---------------------------------*/
 
     public function view($id){
         try{
@@ -114,7 +154,16 @@ class Student extends Connection {
     }
 //          Display Single Data 
 
+/* -----------------------------
+Execution
 
+include_once '../../../vendor/autoload.php';
+
+$student = new App\admin\Student\Student();
+
+$student = $student->view($_GET['id']);
+------------------------------*/
+        
 
     public function update(){
         try{
@@ -142,7 +191,30 @@ class Student extends Connection {
     }
 //          Edit Single Data
 
+/* -----------------------------
+Execution
+include_once '../../../vendor/autoload.php';
 
+use \App\admin\Student\Student as Student;
+use \App\lib\Helper as Helper;
+
+session_start();
+
+$student = new Student();
+
+$data = $student->set($_POST)->update();
+
+if(!empty($_FILES['image']['name'])){
+    if(isset($_POST['image'])){
+        unlink('../../../assets/uploads/students/'.$_POST['image']);
+    }
+}
+
+$helper = new Helper();
+$_POST['image'] = $helper->upload_img();
+$data = $student->set($_POST)->update();
+
+------------------------------*/
 
     public function delete($id){
         try{
@@ -164,5 +236,23 @@ class Student extends Connection {
         }
     }
 //          Delete Single Data 
+        
+ /*------------------
+Execution
+
+include_once '../../../vendor/autoload.php';
+
+$student = new \App\admin\Student\Student();
+
+$data = $student->delete_img($_GET['id']);
+
+if(isset($data['image'])){
+    unlink('../../../assets/uploads/students/'.$data['image']);
+
+}
+
+$data = $student->delete($_GET['id']);
+ ------------------*/       
+        
 
 }
