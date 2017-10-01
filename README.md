@@ -1,1 +1,1 @@
-# bs-modal-confirm-delete-btn
+# Essential PHP Code Snippets
