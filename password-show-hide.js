@@ -25,8 +25,8 @@
 </script>
 
 /*
-<span class="hide_show">
+<div class="hide_show">
   <span class="btn btn-default">Show</span>
-</span>
+</div>
 *
 // html
