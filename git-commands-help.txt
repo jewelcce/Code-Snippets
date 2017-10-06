@@ -6,7 +6,7 @@ git config --unset-all --global user.name
 git config --unset-all --global user.email
 
 
-…or create a new repository on the command line
+….or create a new repository on the command line
 
 echo "# JeweLaravel" >> README.md
 git init
