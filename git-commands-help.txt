@@ -1,4 +1,7 @@
-﻿Login:
+﻿
+
+
+Login:
 
 
 Logout using-Gitbash:
@@ -35,4 +38,3 @@ git commit -m "committed message"
 
 push
 git push -u origin master
-
