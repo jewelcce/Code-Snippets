@@ -1,4 +1,4 @@
-…or create a new repository on the command line
+﻿…or create a new repository on the command line
 
 echo "# JeweLaravel" >> README.md
 git init
@@ -11,3 +11,9 @@ git push -u origin master
 
 git remote add origin https://github.com/jewelcce/JeweLaravel.git
 git push -u origin master
+
+------------
+
+Clone repo
+
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
