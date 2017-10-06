@@ -3,11 +3,14 @@
 
 Login:
 
-Logout using-Gitbash:
+Logout from Local & Global using-Gitbash:
+
+git config --unset-all user.name
+git config --unset-all user.email
 
 git config --unset-all --global user.name
 git config --unset-all --global user.email
-
+------------------
 
 ….or create a new repository on the command line
 
