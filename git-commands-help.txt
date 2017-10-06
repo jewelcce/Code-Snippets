@@ -17,3 +17,13 @@ git push -u origin master
 Clone repo
 
 git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+
+add:
+git add .
+
+commit:
+git commit -m "committed message"
+
+push
+git push -u origin master
+
